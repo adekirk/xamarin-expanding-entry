@@ -3,6 +3,8 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:ios="clr-namespace:Xamarin.Forms.PlatformConfiguration.iOSSpecific;assembly=Xamarin.Forms.Core"
 
+             xmlns:controls="clr-namespace:ExpandingEntry.Controls"
+
              ios:Page.UseSafeArea="True"
 
              x:Class="ExpandingEntry.MainPage">
@@ -10,6 +12,18 @@
     <StackLayout Padding="10">
         <Label Text="Expanding Entry" />
 
+        <Frame BorderColor="Red">
+            <controls:ExpandingEditorControl
+                Placeholder="Not Expandable"
+                HasRoundedCorner="True"
+                IsExpandable="False" />
+        </Frame>
 
+        <Frame BorderColor="Red">
+            <controls:ExpandingEditorControl
+                Placeholder="Expandable"
+                HasRoundedCorner="False"
+                IsExpandable="True" />
+        </Frame>
     </StackLayout>
 </ContentPage>
